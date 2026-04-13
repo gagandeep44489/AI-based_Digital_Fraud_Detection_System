@@ -25,8 +25,16 @@ npm run dev
 
 Frontend URL: `http://127.0.0.1:5173`
 
-The frontend calls backend APIs at `http://127.0.0.1:8000`:
-- `POST /messages`
-- `GET /predictions/{message_id}`
+The frontend calls backend APIs at `http://127.0.0.1:8000` by default.
+You can override this with:
 
-> Note: Backend message endpoints currently require JWT auth. To test quickly, store a valid token in browser localStorage under key `token`.
+```bash
+VITE_API_BASE_URL=http://127.0.0.1:8000
+```
+
+## Deployment
+See `DEPLOYMENT.md` for:
+- Render backend + static frontend
+- AWS EC2 setup with Nginx reverse proxy
+- Optional Docker backend deployment
+
