@@ -1,0 +1,6 @@
+id,content,source,label,category
+1,"Earn money daily from home, no skills required","whatsapp",scam,job_scam
+2,"Your bank account will be blocked, update now","sms",scam,phishing
+3,"Interview scheduled tomorrow at 10 AM","email",safe,legit_job
+4,"Pay registration fee to confirm your offer letter","telegram",scam,job_scam
+5,"Meeting reminder for project kickoff","slack",safe,business
