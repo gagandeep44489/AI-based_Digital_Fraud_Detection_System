@@ -1,16 +1,11 @@
-# AI-based Digital Fraud Detection System (Backend)
+# AI-based Digital Fraud Detection System
 
-Production-style FastAPI backend for fraud risk detection over suspicious messages and URLs.
+This repository contains:
+- **FastAPI backend** for fraud detection APIs
+- **React + Vite frontend** for a clean user interface
 
-## Features
-- JWT Authentication (`/auth/register`, `/auth/login`)
-- Message ingestion + automatic fraud prediction (`/messages`)
-- Prediction retrieval (`/predictions/{message_id}`)
-- User feedback capture (`/feedback`)
-- URL safety checker (`/check-url`)
-- Rule seeding on startup (`rules` table)
-
-## Run locally
+## Backend (FastAPI)
+Run with:
 ```bash
 python -m venv .venv
 source .venv/bin/activate
@@ -19,4 +14,19 @@ cp .env.example .env
 uvicorn app.main:app --reload
 ```
 
-Open docs: `http://127.0.0.1:8000/docs`
+Docs: `http://127.0.0.1:8000/docs`
+
+## Frontend (React + Tailwind)
+Run with:
+```bash
+npm install
+npm run dev
+```
+
+Frontend URL: `http://127.0.0.1:5173`
+
+The frontend calls backend APIs at `http://127.0.0.1:8000`:
+- `POST /messages`
+- `GET /predictions/{message_id}`
+
+> Note: Backend message endpoints currently require JWT auth. To test quickly, store a valid token in browser localStorage under key `token`.
